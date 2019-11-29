@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        parkdata-in:
+          destination: parkdata
+          contentType: application/json
+        parkdata-out:
+          destination: parkdataprocessed
+          contentType: application/json
+server.port: 0
+mongo.database: parkdataDB
+mongo.host: localhost
+mongo.port: 27017
