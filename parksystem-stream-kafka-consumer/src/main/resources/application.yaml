@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        parkdata-in:
+          destination: parkdata
+          contentType: application/json
+server.port: 0
+
